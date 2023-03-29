@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<taglib xmlns=""
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        version="2.1" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee ">
+
+    <tlib-version>1.0</tlib-version>
+    <jsp-version></jsp-version>
+    <short-name>myshortname</short-name>
+    <uri>https://google.com</uri>
+    <tag>
+        ...
+    </tag>
+    ...
+</taglib>
