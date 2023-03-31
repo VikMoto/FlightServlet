@@ -1,10 +1,5 @@
 package flightservlet.util;
 
-import flightservlet.service.FlightService;
-import flightservlet.servlets.FlightServlet;
-
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -18,9 +13,12 @@ public class PropertiesUtil {
     }
 
     private static void loadProperties() {
-//        try (InputStream resourceAsStream = PropertiesUtil.class.getClassLoader().getResourceAsStream("application.properties")) {
-        try (InputStream resourceAsStream = new FileInputStream(FlightServlet.getResourcesDirectory())) {
-            System.out.println("resourceAsStream = " + resourceAsStream);
+        try (InputStream resourceAsStream = PropertiesUtil.class.getClassLoader().getResourceAsStream("application.properties")) {
+//        try (InputStream resourceAsStream = new FileInputStream(FlightServlet.getResourcesDirectory())) {
+
+            String resourcePath = PropertiesUtil.class.getClassLoader().getResource("application.properties").getPath();
+            System.out.println("resourcePath = " + resourcePath);
+//            System.out.println("resourceAsStream = " + resourceAsStream);
 
             String classpath = System.getProperty("java.class.path");
             System.out.println("Classpath: " + classpath);
